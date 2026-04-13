@@ -1,4 +1,4 @@
-# Cybersecurity Awareness Bot – Part 1
+# Cybersecurity Awareness Bot â€“ Part 1
 
 ## My Project
 
@@ -10,7 +10,7 @@ This is my Part 1 submission for the Cybersecurity Awareness Bot assignment. I b
 I created a new Console App in Visual Studio using .NET 6.0. I named the project `CybersecurityAwarenessBot`. Then I created five C# classes: `Program.cs`, `Chatbot.cs`, `ResponseManager.cs`, `UIManager.cs`, and `AudioManager.cs`.
 
 ### Step 2. Voice Greeting (Question 1)
-I recorded a short voice message saying "Hello! Welcome to the Cybersecurity Awareness Bot…" and saved it as `chatbot.wav`. In `AudioManager.cs`, I wrote code that searches for the file and plays it when the bot starts. If the file is missing, the bot still runs without crashing.
+I recorded a short voice message saying "Hello! Welcome to the Cybersecurity Awareness Botâ€¦" and saved it as `chatbot.wav`. In `AudioManager.cs`, I wrote code that searches for the file and plays it when the bot starts. If the file is missing, the bot still runs without crashing.
 
 ### Step 3. ASCII Art Logo (Question 2)
 In `UIManager.cs`, I added a large ASCII art drawing that spells out "CYBERSECURITY AWARENESS BOT" at the bottom. I used cyan colour to make it stand out.
@@ -20,10 +20,10 @@ The bot first asks for my name. It checks that I don't leave it empty. Then it p
 
 ### Step 5. Basic Responses (Question 4)
 I programmed the bot to answer:
-- "How are you?" – gives a random friendly reply.
-- "What is your purpose?" – explains the bot's mission.
-- "What can I ask you about?" – lists topics.
-- Password safety, phishing, and safe browsing – each has a clear definition.
+- "How are you?" â€“ gives a random friendly reply.
+- "What is your purpose?" â€“ explains the bot's mission.
+- "What can I ask you about?" â€“ lists topics.
+- Password safety, phishing, and safe browsing â€“ each has a clear definition.
 
 ### Step 6. Input Validation (Question 5)
 If I type nothing, the bot asks me to try again. If I type something it doesn't understand, it says "I didn't quite understand that. Could you rephrase?" I also added try-catch blocks everywhere so the bot never crashes.
@@ -50,7 +50,7 @@ I tested many inputs:
 - `exit` ? closes nicely
 
 ### 11. GitHub and CI
-I made a GitHub repository and committed my code after each major feature (at least 6 commits). I set up GitHub Actions to automatically build the project on every push – this checks for any errors.
+I made a GitHub repository and committed my code after each major feature (at least 6 commits). I set up GitHub Actions to automatically build the project on every push â€“ this checks for any errors.
 
 ### 12. Video Presentation
 I recorded an 8?minute video showing the bot running, explaining my code, and demonstrating all the features. I used my own voice (no AI voice) and uploaded it as an unlisted YouTube link.
@@ -63,11 +63,11 @@ I recorded an 8?minute video showing the bot running, explaining my code, and de
 
 ## My Files
 
-- `Program.cs` – starts the chatbot.
-- `Chatbot.cs` – main loop, asks for name, handles exit.
-- `ResponseManager.cs` – stores all responses, handles follow?ups and typos.
-- `UIManager.cs` – all console colours, ASCII art, borders, typing effect.
-- `AudioManager.cs` – plays the voice greeting.
+- `Program.cs` â€“ starts the chatbot.
+- `Chatbot.cs` â€“ main loop, asks for name, handles exit.
+- `ResponseManager.cs` â€“ stores all responses, handles follow?ups and typos.
+- `UIManager.cs` â€“ all console colours, ASCII art, borders, typing effect.
+- `AudioManager.cs` â€“ plays the voice greeting.
 
 ## What I Learned
 
@@ -76,4 +76,4 @@ I learned how to use dictionaries for keyword matching, how to add a typing effe
 ---
 
 **Thank you for reviewing my project.**  
-*April 2026*
+* 13 April 2026*
