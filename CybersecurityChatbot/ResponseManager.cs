@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Dictionary stores keyword-response pairs
+
+using System;
 using System.Collections.Generic;
 
 namespace CybersecurityAwarenessBot
