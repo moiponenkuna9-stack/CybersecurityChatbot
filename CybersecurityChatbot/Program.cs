@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Entry point – starts the chatbot
+
+using System;
 
 namespace CybersecurityAwarenessBot
 {
