@@ -1,4 +1,4 @@
-﻿using System;
+// AudioManager handles voice greeting﻿using System;
 using System.IO;
 using System.Media;
 
