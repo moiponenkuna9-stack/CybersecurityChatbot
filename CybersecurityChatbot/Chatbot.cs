@@ -1,4 +1,4 @@
-﻿using System;
+﻿// Main chat loop handles user inputusing System;
 
 namespace CybersecurityAwarenessBot
 {
