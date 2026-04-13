@@ -1,4 +1,4 @@
-﻿using System;
+﻿// ASCII art logo displays Cybersecurity Awareness Botusing System;
 using System.Threading;
 
 namespace CybersecurityAwarenessBot
