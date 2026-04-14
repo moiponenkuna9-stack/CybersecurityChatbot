@@ -1,4 +1,4 @@
-name: .NET Build
+name: Check Files & Build
 
 on:
   push:
@@ -7,11 +7,32 @@ on:
     branches: [ "master", "main" ]
 
 jobs:
-  build:
+  check-and-build:
     runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v4
+
+    - name: Check required files exist
+      run: |
+        $requiredFiles = @(
+          "Program.cs",
+          "Chatbot.cs",
+          "ResponseManager.cs",
+          "UIManager.cs",
+          "AudioManager.cs",
+          "*.csproj"
+        )
+        $missing = $false
+        foreach ($pattern in $requiredFiles) {
+          $found = Get-ChildItem -Recurse -Filter $pattern
+          if (-not $found) {
+            Write-Error "Missing file: $pattern"
+            $missing = $true
+          }
+        }
+        if ($missing) { exit 1 }
+        Write-Host "All required files found."
 
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
@@ -27,6 +48,11 @@ jobs:
           Write-Error "No .csproj file found"
           exit 1
         }
+
+    - name: Build
+      run: |
+        $proj = Get-ChildItem -Recurse -Filter *.csproj | Select-Object -First 1
+        dotnet build $proj.FullName --configuration Release --no-restore
 
     - name: Build
       run: |
