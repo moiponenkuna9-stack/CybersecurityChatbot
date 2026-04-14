@@ -18,8 +18,17 @@ jobs:
       with:
         dotnet-version: 8.0.x
 
-    - name: Restore dependencies
-      run: dotnet restore CybersecurityChatbot.csproj
+    - name: Find and restore
+      run: |
+        $proj = Get-ChildItem -Recurse -Filter *.csproj | Select-Object -First 1
+        if ($proj) {
+          dotnet restore $proj.FullName
+        } else {
+          Write-Error "No .csproj file found"
+          exit 1
+        }
 
     - name: Build
-      run: dotnet build CybersecurityChatbot.csproj --configuration Release
+      run: |
+        $proj = Get-ChildItem -Recurse -Filter *.csproj | Select-Object -First 1
+        dotnet build $proj.FullName --configuration Release --no-restore
