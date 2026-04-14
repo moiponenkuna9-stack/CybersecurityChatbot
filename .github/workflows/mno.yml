@@ -52,9 +52,5 @@ jobs:
     - name: Build
       run: |
         $proj = Get-ChildItem -Recurse -Filter *.csproj | Select-Object -First 1
-        dotnet build $proj.FullName --configuration Release --no-restore
-
-    - name: Build
-      run: |
-        $proj = Get-ChildItem -Recurse -Filter *.csproj | Select-Object -First 1
+        dotnet build $proj.FullName --configuration Release --no-restoreurse -Filter *.csproj | Select-Object -First 1
         dotnet build $proj.FullName --configuration Release --no-restore
